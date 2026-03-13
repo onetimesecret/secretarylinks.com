@@ -8,7 +8,7 @@ export interface UseCase {
   flow: Array<{ actor: string; action: string }>;
   scenarios: Array<{ title: string; text: string }>;
   features: Array<{ icon: string; title: string; text: string }>;
-  compliance?: string[];
+
 }
 
 export const usecases: UseCase[] = [
@@ -40,7 +40,6 @@ export const usecases: UseCase[] = [
       { icon: '&#128200;', title: 'Audit trail', text: 'Know exactly when the link was sent, accessed, submitted to, and viewed. Compliance-ready logging.' },
       { icon: '&#128736;', title: 'Branded experience', text: 'New hires see your company logo and messaging. Builds trust from day one.' },
     ],
-    compliance: ['SOC2', 'GDPR', 'CCPA'],
   },
   {
     slug: 'legal',
@@ -70,7 +69,6 @@ export const usecases: UseCase[] = [
       { icon: '&#127759;', title: 'Regional storage', text: 'Store submissions in specific jurisdictions. Meet data residency requirements for cross-border matters.' },
       { icon: '&#128268;', title: 'API integration', text: 'Generate collection links from your case management system. Automate the intake workflow.' },
     ],
-    compliance: ['SOC2', 'GDPR', 'HIPAA'],
   },
   {
     slug: 'it-security',
@@ -100,18 +98,17 @@ export const usecases: UseCase[] = [
       { icon: '&#128268;', title: 'API for automation', text: 'Integrate with your ticketing system. Auto-generate collection links when incidents are created.' },
       { icon: '&#128737;', title: 'Passphrase protection', text: 'Separate the link from the passphrase across different channels for defense in depth.' },
     ],
-    compliance: ['SOC2', 'ISO 27001'],
   },
   {
     slug: 'healthcare',
     emoji: '&#127973;',
     title: 'Healthcare',
-    tagline: 'Patient information through a HIPAA-appropriate channel',
+    tagline: 'Patient information through a secure, ephemeral channel',
     description: 'Patients submit insurance cards, medical records, consent forms, and photos of conditions through encrypted, self-destructing links. No patient data in email.',
     problems: [
       { icon: '&#128231;', title: 'PHI in email', text: 'Patients email photos of insurance cards and medical documents. That protected health information now lives on email servers indefinitely.' },
       { icon: '&#128241;', title: 'Texted photos', text: 'Patients text photos of skin conditions or injuries to their provider. Those images live on both phones and in carrier logs.' },
-      { icon: '&#9888;', title: 'HIPAA violations', text: 'Every unsecured copy of patient data is a potential HIPAA violation. Fines range from $100 to $50,000 per incident.' },
+      { icon: '&#9888;', title: 'Regulatory exposure', text: 'Every unsecured copy of patient data is a potential regulatory violation. Fines can reach tens of thousands of dollars per incident.' },
     ],
     flow: [
       { actor: 'Provider', action: 'Generates a Secretary Link for the patient' },
@@ -127,10 +124,9 @@ export const usecases: UseCase[] = [
     features: [
       { icon: '&#128206;', title: 'Image uploads', text: 'Patients submit photos of insurance cards, conditions, and documents. High-resolution images, securely transmitted.' },
       { icon: '&#127759;', title: 'US data storage', text: 'All submissions stored on US-based infrastructure. No data leaves the country.' },
-      { icon: '&#128200;', title: 'HIPAA audit trail', text: 'Complete access log for every submission. Who created it, who accessed it, when it was destroyed.' },
+      { icon: '&#128200;', title: 'Full audit trail', text: 'Complete access log for every submission. Who created it, who accessed it, when it was destroyed.' },
       { icon: '&#128736;', title: 'Practice branding', text: 'Patients see your practice name and logo. Familiar branding reduces friction and builds trust.' },
     ],
-    compliance: ['HIPAA', 'SOC2'],
   },
   {
     slug: 'journalism',
@@ -189,7 +185,6 @@ export const usecases: UseCase[] = [
       { icon: '&#128268;', title: 'Claims system API', text: 'Generate collection links from your claims platform. Evidence flows directly into the case file.' },
       { icon: '&#128736;', title: 'Carrier branding', text: 'Claimants see your brand. Familiar experience reduces friction during a stressful process.' },
     ],
-    compliance: ['SOC2', 'CCPA'],
   },
 ];
 

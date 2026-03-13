@@ -99,16 +99,6 @@ const { usecase } = Astro.props;
       ))}
     </div>
 
-    {usecase.compliance && usecase.compliance.length > 0 && (
-      <div class="mt-12 text-center" data-reveal>
-        <p class="mb-3 text-sm font-medium text-text-secondary">Compliance support</p>
-        <div class="flex justify-center gap-2">
-          {usecase.compliance.map(badge => (
-            <span class="rounded-full border border-teal/15 bg-teal/8 px-3 py-1 text-xs font-medium text-teal">{badge}</span>
-          ))}
-        </div>
-      </div>
-    )}
   </Section>
 
   <!-- CTA -->

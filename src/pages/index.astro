@@ -20,7 +20,7 @@ const useCases = [
   { href: '/usecases/hr', emoji: '&#128188;', title: 'HR & Onboarding', description: 'Collect tax forms, IDs, banking details, and signed documents from new hires without emailing sensitive personal data back and forth.' },
   { href: '/usecases/legal', emoji: '&#9878;', title: 'Legal & Compliance', description: 'Request documents, testimony, and evidence from clients or witnesses. Maintain chain-of-custody with auditable access logs.' },
   { href: '/usecases/it-security', emoji: '&#128187;', title: 'IT & Security', description: 'Collect incident reports, screenshots, credentials for compromised accounts, or vulnerability details from reporters.' },
-  { href: '/usecases/healthcare', emoji: '&#127973;', title: 'Healthcare', description: 'Patients submit insurance cards, medical records, consent forms, and photos through a HIPAA-appropriate channel.' },
+  { href: '/usecases/healthcare', emoji: '&#127973;', title: 'Healthcare', description: 'Patients submit insurance cards, medical records, consent forms, and photos through an encrypted, self-destructing channel.' },
   { href: '/usecases/journalism', emoji: '&#128240;', title: 'Journalism & Tips', description: 'Sources submit documents, photos, and statements through ephemeral links that leave no trace once viewed.' },
   { href: '/usecases/insurance', emoji: '&#128203;', title: 'Insurance Claims', description: 'Claimants submit photos of damage, receipts, police reports. Evidence flows securely into the case file.' },
 ];
@@ -244,11 +244,6 @@ const comparison = [
         <p class="mt-6 text-lg text-cream/70 leading-relaxed">
           Onetime Secret has been the go-to for sharing sensitive information since 2012. No accounts required, no data retained, no traces left behind. Secretary Links brings that same philosophy to the other side of the exchange: secure collection.
         </p>
-        <div class="mt-6 flex flex-wrap gap-2">
-          {['SOC2', 'GDPR', 'CCPA', 'HIPAA'].map(badge => (
-            <span class="rounded-full border border-teal/15 bg-teal/8 px-3 py-1 text-xs font-medium text-teal">{badge}</span>
-          ))}
-        </div>
         <a href="https://onetimesecret.com" target="_blank" rel="noopener" class="mt-6 inline-flex rounded-lg border border-cream/25 px-6 py-3 font-semibold text-cream no-underline transition hover:border-cream/50 hover:bg-cream/5">
           Visit Onetime Secret &rarr;
         </a>
