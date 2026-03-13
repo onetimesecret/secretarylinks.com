@@ -6,7 +6,7 @@ interface Props {
 const { target } = Astro.props;
 ---
 
-<div data-countdown={target} class="mt-10 flex gap-6" aria-label="Countdown to launch">
+<div data-countdown={target} class="mt-10 flex gap-6" aria-label="Countdown to early access">
   {['Days', 'Hours', 'Minutes', 'Seconds'].map(label => (
     <div class="text-center">
       <span class="block font-mono text-4xl font-bold text-accent sm:text-5xl" data-countdown-unit={label.toLowerCase()}>00</span>

@@ -93,7 +93,7 @@ export const usecases: UseCase[] = [
       { title: 'Bug bounty intake', text: 'External researchers submit vulnerability details, proof-of-concept code, and screenshots through an ephemeral collection link.' },
     ],
     features: [
-      { icon: '&#128274;', title: 'Zero-knowledge encryption', text: 'Submissions encrypted before storage. Even system administrators cannot read submission contents.' },
+      { icon: '&#128274;', title: 'Server-side encryption', text: 'Every submission is encrypted with its own unique key before storage. Keys are separated from data at the infrastructure level.' },
       { icon: '&#128206;', title: 'File attachments', text: 'Screenshots, log files, configuration dumps. Whatever the incident requires.' },
       { icon: '&#128268;', title: 'API for automation', text: 'Integrate with your ticketing system. Auto-generate collection links when incidents are created.' },
       { icon: '&#128737;', title: 'Passphrase protection', text: 'Separate the link from the passphrase across different channels for defense in depth.' },
@@ -151,8 +151,8 @@ export const usecases: UseCase[] = [
       { title: 'Photo evidence', text: 'A source at a protest submits photos and a written account of events. No camera roll syncing, no cloud backup, no metadata breadcrumbs.' },
     ],
     features: [
-      { icon: '&#128274;', title: 'Zero-knowledge architecture', text: 'We cannot read submissions. No server-side keys. Source identity protected by design, not just by policy.' },
-      { icon: '&#128165;', title: 'True destruction', text: 'Submissions are permanently destroyed after viewing. Not soft-deleted. Not archived. Cryptographically erased.' },
+      { icon: '&#128274;', title: 'Encrypted by default', text: 'Every submission is encrypted with its own unique key. Keys are separated from stored data. Add a passphrase for an additional layer only you and the source know.' },
+      { icon: '&#128165;', title: 'True destruction', text: 'Submissions are permanently destroyed after viewing. Not soft-deleted. Not archived. Purged from all storage.' },
       { icon: '&#127760;', title: 'Custom domains', text: 'Run the tip line on your newsroom domain. Sources see a familiar URL, not a third-party service.' },
       { icon: '&#128737;', title: 'No account required', text: 'Sources never create an account. No username, no email, no identity to subpoena.' },
     ],
