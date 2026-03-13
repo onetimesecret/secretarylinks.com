@@ -13,17 +13,17 @@ const { icon, title, dark = false } = Astro.props;
   class:list={[
     'rounded-2xl border p-8 transition-all duration-300 hover:-translate-y-1',
     dark
-      ? 'border-white/8 bg-white/4 hover:border-gold'
-      : 'border-border bg-white hover:border-gold hover:shadow-lg',
+      ? 'border-border-inv/8 bg-white/4 hover:border-accent'
+      : 'border-border bg-surface-raised hover:border-accent hover:shadow-lg',
   ]}
 >
   {icon && (
-    <div class="mb-6 flex size-14 items-center justify-center rounded-xl bg-linear-to-br from-gold/10 to-teal/10 text-2xl">
+    <div class="mb-6 flex size-14 items-center justify-center rounded-xl bg-linear-to-br from-accent/10 to-accent-secondary/10 text-2xl">
       <Fragment set:html={icon} />
     </div>
   )}
   <h3 class="mb-2 text-xl">{title}</h3>
-  <p class:list={['text-[0.95rem] leading-relaxed', dark ? 'text-cream/60' : 'text-text-secondary']}>
+  <p class:list={['text-[0.95rem] leading-relaxed', dark ? 'text-text-inverse/60' : 'text-text-secondary']}>
     <slot />
   </p>
 </div>

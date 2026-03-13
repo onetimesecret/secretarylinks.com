@@ -8,10 +8,10 @@ interface Props {
 const { id, variant = 'default', class: className = '' } = Astro.props;
 
 const bgClasses: Record<string, string> = {
-  default: 'bg-cream text-text-primary',
-  dark: 'bg-navy text-cream',
-  'navy-light': 'bg-navy-light text-cream',
-  'cream-dark': 'bg-cream-dark text-text-primary',
+  default: 'bg-surface text-text-primary',
+  dark: 'bg-surface-inv text-text-inverse',
+  'navy-light': 'bg-surface-inv-alt text-text-inverse',
+  'cream-dark': 'bg-surface-alt text-text-primary',
 };
 ---
 

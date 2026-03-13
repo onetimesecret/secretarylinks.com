@@ -19,23 +19,23 @@ const { usecase } = Astro.props;
 >
 
   <!-- Hero -->
-  <section class="relative flex min-h-[60vh] items-center bg-navy pt-32 pb-20 text-cream">
+  <section class="relative flex min-h-[60vh] items-center bg-surface-inv pt-32 pb-20 text-text-inverse">
     <div class="pointer-events-none absolute inset-0 opacity-[0.04]">
-      <div class="absolute inset-0 bg-radial from-gold/100 at-[20%_50%] to-transparent"></div>
+      <div class="absolute inset-0 bg-radial from-accent/100 at-[20%_50%] to-transparent"></div>
     </div>
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
       <div class="max-w-2xl">
-        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-gold/12 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/12 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
           <Fragment set:html={usecase.emoji} />
           {usecase.title}
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl">{usecase.tagline}</h1>
-        <p class="mt-6 max-w-xl text-lg text-cream/70 leading-relaxed">{usecase.description}</p>
+        <p class="mt-6 max-w-xl text-lg text-text-inverse/70 leading-relaxed">{usecase.description}</p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="/#signup" class="rounded-lg bg-gold px-7 py-3.5 font-semibold text-navy-dark no-underline transition hover:bg-gold-light hover:-translate-y-px">
+          <a href="/#signup" class="rounded-lg bg-accent px-7 py-3.5 font-semibold text-accent-on no-underline transition hover:bg-accent-hover hover:-translate-y-px">
             Get Early Access
           </a>
-          <a href="/#how-it-works" class="rounded-lg border border-cream/25 px-7 py-3.5 font-semibold text-cream no-underline transition hover:border-cream/50 hover:bg-cream/5">
+          <a href="/#how-it-works" class="rounded-lg border border-white/25 px-7 py-3.5 font-semibold text-text-inverse no-underline transition hover:border-white/50 hover:bg-white/5">
             How It Works
           </a>
         </div>
@@ -63,12 +63,12 @@ const { usecase } = Astro.props;
     <div class="mx-auto max-w-2xl space-y-6" data-stagger>
       {usecase.flow.map((step, i) => (
         <div data-reveal class="flex items-start gap-5">
-          <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-gold/12 border border-gold/25 font-mono text-sm font-bold text-gold">
+          <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent/12 border border-accent/25 font-mono text-sm font-bold text-accent">
             {i + 1}
           </div>
           <div>
-            <span class="text-xs font-semibold uppercase tracking-widest text-gold/70">{step.actor}</span>
-            <p class="mt-1 text-cream/80 leading-relaxed">{step.action}</p>
+            <span class="text-xs font-semibold uppercase tracking-widest text-accent/70">{step.actor}</span>
+            <p class="mt-1 text-text-inverse/80 leading-relaxed">{step.action}</p>
           </div>
         </div>
       ))}
@@ -82,7 +82,7 @@ const { usecase } = Astro.props;
     </SectionHeader>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
       {usecase.scenarios.map(s => (
-        <div data-reveal class="rounded-2xl border border-border bg-white p-8">
+        <div data-reveal class="rounded-2xl border border-border bg-surface-raised p-8">
           <h3 class="mb-3 text-xl">{s.title}</h3>
           <p class="text-[0.95rem] text-text-secondary leading-relaxed">{s.text}</p>
         </div>
@@ -103,11 +103,11 @@ const { usecase } = Astro.props;
 
   <!-- CTA -->
   <Section>
-    <div class="relative overflow-hidden rounded-3xl bg-linear-to-br from-navy to-navy-light px-8 py-16 text-center text-cream sm:px-16" data-reveal>
-      <div class="pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-3/4 bg-radial from-gold/8 to-transparent"></div>
+    <div class="relative overflow-hidden rounded-3xl bg-linear-to-br from-surface-inv to-surface-inv-alt px-8 py-16 text-center text-text-inverse sm:px-16" data-reveal>
+      <div class="pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-3/4 bg-radial from-accent/8 to-transparent"></div>
       <div class="relative z-10">
         <h2 class="text-3xl sm:text-4xl">Ready to secure your {usecase.title.toLowerCase()} workflow?</h2>
-        <p class="mx-auto mt-4 text-lg text-cream/70" style="max-width: 480px;">Get early access to Secretary Links. Launching April 1, 2026.</p>
+        <p class="mx-auto mt-4 text-lg text-text-inverse/70" style="max-width: 480px;">Get early access to Secretary Links. Launching April 1, 2026.</p>
         <div class="mt-8">
           <SignupForm />
         </div>

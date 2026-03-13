@@ -12,16 +12,16 @@ const { href, emoji, title, description } = Astro.props;
 <a
   href={href}
   data-reveal
-  class="group block overflow-hidden rounded-2xl border border-border bg-white no-underline transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-xl"
+  class="group block overflow-hidden rounded-2xl border border-border bg-surface-raised no-underline transition-all duration-300 hover:-translate-y-1.5 hover:border-accent hover:shadow-xl"
 >
-  <div class="relative overflow-hidden bg-navy px-8 py-6 text-cream">
-    <div class="absolute -top-1/2 -right-1/5 h-[200%] w-3/5 bg-radial from-gold/8 to-transparent"></div>
+  <div class="relative overflow-hidden bg-surface-inv px-8 py-6 text-text-inverse">
+    <div class="absolute -top-1/2 -right-1/5 h-[200%] w-3/5 bg-radial from-accent/8 to-transparent"></div>
     <div class="text-3xl mb-2"><Fragment set:html={emoji} /></div>
-    <h3 class="text-xl text-cream">{title}</h3>
+    <h3 class="text-xl text-text-inverse">{title}</h3>
   </div>
   <div class="p-8">
     <p class="mb-4 text-[0.95rem] text-text-secondary leading-relaxed">{description}</p>
-    <span class="inline-flex items-center gap-1 text-sm font-semibold text-teal transition-all group-hover:gap-2">
+    <span class="inline-flex items-center gap-1 text-sm font-semibold text-accent-secondary transition-all group-hover:gap-2">
       Learn more &rarr;
     </span>
   </div>

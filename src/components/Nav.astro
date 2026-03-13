@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from './ThemeToggle.astro';
+
 const links = [
   { href: '/#how-it-works', label: 'How It Works' },
   { href: '/#use-cases', label: 'Use Cases' },
@@ -10,11 +12,11 @@ const links = [
 <nav
   data-nav
   class="fixed top-0 inset-x-0 z-50 py-4 transition-all duration-300
-         [&.scrolled]:bg-navy/97 [&.scrolled]:shadow-[0_1px_0_rgba(255,255,255,0.06)]
+         [&.scrolled]:bg-surface-inv/97 [&.scrolled]:shadow-[0_1px_0_rgba(255,255,255,0.06)]
          [&.scrolled]:py-2 [&.scrolled]:backdrop-blur-lg"
 >
   <div class="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
-    <a href="/" class="flex items-center gap-2 font-display text-xl text-cream no-underline">
+    <a href="/" class="flex items-center gap-2 font-display text-xl text-text-inverse no-underline">
       <svg class="size-8" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
         <path d="M8 20 L16 10 L20 14 L24 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -27,7 +29,7 @@ const links = [
     <!-- Mobile toggle -->
     <button
       data-nav-toggle
-      class="lg:hidden p-2 text-cream"
+      class="lg:hidden p-2 text-text-inverse"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
@@ -43,11 +45,11 @@ const links = [
       data-nav-links
       class="hidden lg:flex items-center gap-8 list-none
              max-lg:absolute max-lg:top-full max-lg:inset-x-0
-             max-lg:flex-col max-lg:bg-navy max-lg:p-6 max-lg:gap-4"
+             max-lg:flex-col max-lg:bg-surface-inv max-lg:p-6 max-lg:gap-4"
     >
       {links.map(link => (
         <li>
-          <a href={link.href} class="text-sm font-medium text-cream/70 hover:text-cream transition-colors no-underline">
+          <a href={link.href} class="text-sm font-medium text-text-inverse/70 hover:text-text-inverse transition-colors no-underline">
             {link.label}
           </a>
         </li>
@@ -57,15 +59,16 @@ const links = [
           href="https://onetimesecret.com"
           target="_blank"
           rel="noopener"
-          class="inline-flex items-center gap-1.5 rounded-md border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-medium text-teal no-underline"
+          class="inline-flex items-center gap-1.5 rounded-md border border-accent-secondary/20 bg-accent-secondary/8 px-3 py-1 text-xs font-medium text-accent-secondary no-underline"
         >
           Onetime Secret
         </a>
       </li>
-      <li>
+      <li class="flex items-center gap-2">
+        <ThemeToggle />
         <a
           href="/#signup"
-          class="inline-flex items-center gap-1 rounded-md bg-gold px-5 py-2 text-sm font-semibold text-navy-dark no-underline transition hover:bg-gold-light hover:-translate-y-px"
+          class="inline-flex items-center gap-1 rounded-md bg-accent px-5 py-2 text-sm font-semibold text-accent-on no-underline transition hover:bg-accent-hover hover:-translate-y-px"
         >
           Get Early Access
         </a>

@@ -16,14 +16,14 @@ const { steps } = Astro.props;
   {steps.map((step, i) => (
     <>
       <div class="flex max-w-[160px] flex-col items-center gap-2 text-center">
-        <div class="flex size-[72px] items-center justify-center rounded-full border-2 border-gold bg-gold/10 text-3xl">
+        <div class="flex size-[72px] items-center justify-center rounded-full border-2 border-accent bg-accent/10 text-3xl">
           <Fragment set:html={step.icon} />
         </div>
         <span class="text-sm font-semibold">{step.label}</span>
         <span class="text-xs text-text-secondary">{step.description}</span>
       </div>
       {i < steps.length - 1 && (
-        <span class="shrink-0 text-2xl text-gold max-sm:rotate-90">&rarr;</span>
+        <span class="shrink-0 text-2xl text-accent max-sm:rotate-90">&rarr;</span>
       )}
     </>
   ))}

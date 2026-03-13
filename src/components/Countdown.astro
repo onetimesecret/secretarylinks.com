@@ -9,8 +9,8 @@ const { target } = Astro.props;
 <div data-countdown={target} class="mt-10 flex gap-6" aria-label="Countdown to launch">
   {['Days', 'Hours', 'Minutes', 'Seconds'].map(label => (
     <div class="text-center">
-      <span class="block font-mono text-4xl font-bold text-gold sm:text-5xl" data-countdown-unit={label.toLowerCase()}>00</span>
-      <span class="mt-1 text-xs uppercase tracking-widest text-cream/50">{label}</span>
+      <span class="block font-mono text-4xl font-bold text-accent sm:text-5xl" data-countdown-unit={label.toLowerCase()}>00</span>
+      <span class="mt-1 text-xs uppercase tracking-widest text-text-inverse/50">{label}</span>
     </div>
   ))}
 </div>
@@ -34,7 +34,7 @@ const { target } = Astro.props;
       });
 
       if (diff <= 0) {
-        el.innerHTML = '<span class="font-display text-3xl text-gold">It\'s here.</span>';
+        el.innerHTML = '<span class="font-display text-3xl text-accent">It\'s here.</span>';
       }
     }
 
