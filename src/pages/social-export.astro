@@ -1,0 +1,136 @@
+---
+// Export page - renders social previews at full 1200x630 for screenshot capture
+// Visit /social-export#og-1 through #og-4 to capture each
+---
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('/fonts/Inter-Regular.woff2');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; }
+    .preview { width: 1200px; height: 630px; position: relative; overflow: hidden; }
+    .bg { background: oklch(0.17 0.02 260); }
+    .flex-center { display: flex; align-items: center; justify-content: center; }
+    .flex-col { flex-direction: column; }
+    .gap-4 { gap: 1rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-16 { gap: 4rem; }
+    .text-inverse { color: oklch(0.97 0.01 90); }
+    .text-inverse-70 { color: oklch(0.97 0.01 90 / 0.7); }
+    .text-inverse-50 { color: oklch(0.97 0.01 90 / 0.5); }
+    .text-inverse-40 { color: oklch(0.97 0.01 90 / 0.4); }
+    .text-inverse-80 { color: oklch(0.97 0.01 90 / 0.8); }
+    .text-accent { color: oklch(0.73 0.12 80); }
+    .font-display { font-family: "DM Serif Display", Georgia, serif; }
+    .font-body { font-family: "Inter", system-ui, sans-serif; }
+    .text-5xl { font-size: 3rem; line-height: 1.1; }
+    .text-4xl { font-size: 2.25rem; line-height: 1.1; }
+    .text-3xl { font-size: 1.875rem; line-height: 1.2; }
+    .text-2xl { font-size: 1.5rem; line-height: 1.2; }
+    .text-xl { font-size: 1.25rem; }
+    .text-sm { font-size: 0.875rem; }
+    .text-xs { font-size: 0.75rem; }
+    .text-center { text-align: center; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .items-end { align-items: flex-end; }
+    .items-center { align-items: center; }
+    .absolute { position: absolute; }
+    .bottom-6 { bottom: 1.5rem; }
+    .right-8 { right: 2rem; }
+    .hidden { display: none; }
+    :target { display: flex !important; }
+  </style>
+</head>
+<body>
+
+<!-- 1. Minimal Brand -->
+<div id="og-1" class="preview bg flex-center hidden">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+      <svg width="64" height="64" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" stroke="oklch(0.97 0.01 90)" stroke-width="1.5" opacity="0.3"/>
+        <path d="M8 18 L8 23 L24 23 L24 18" stroke="oklch(0.97 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 18 L12 18 L14 21 L18 21 L20 18 L24 18" stroke="oklch(0.97 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 7 L16 16 M12 12 L16 16 L20 12" stroke="oklch(0.97 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="font-display text-4xl text-inverse">Secretary Links</span>
+    </div>
+    <p class="font-display text-2xl text-inverse-70">A secure collection service by Onetime Secret</p>
+  </div>
+</div>
+
+<!-- 2. Tagline Focused -->
+<div id="og-2" class="preview bg flex-center hidden" style="padding: 3rem;">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <p class="font-display text-3xl text-inverse text-center" style="line-height: 1.4; margin-bottom: 2rem;">
+      Generate a link. Collect what you need.<br/>
+      <span class="text-accent">Then it's gone forever.</span>
+    </p>
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" stroke="oklch(0.97 0.01 90 / 0.6)" stroke-width="1.5" opacity="0.3"/>
+        <path d="M8 18 L8 23 L24 23 L24 18" stroke="oklch(0.97 0.01 90 / 0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 18 L12 18 L14 21 L18 21 L20 18 L24 18" stroke="oklch(0.97 0.01 90 / 0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 7 L16 16 M12 12 L16 16 L20 12" stroke="oklch(0.97 0.01 90 / 0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="font-display text-xl text-inverse-50">Secretary Links</span>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Feature Grid -->
+<div id="og-3" class="preview bg flex-center hidden">
+  <div style="display: flex; align-items: center; gap: 4rem;">
+    <!-- Left side -->
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" stroke="oklch(0.97 0.01 90)" stroke-width="1.5" opacity="0.3"/>
+        <path d="M8 18 L8 23 L24 23 L24 18" stroke="oklch(0.97 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 18 L12 18 L14 21 L18 21 L20 18 L24 18" stroke="oklch(0.97 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 7 L16 16 M12 12 L16 16 L20 12" stroke="oklch(0.97 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; align-items: flex-end;">
+        <p class="font-display text-2xl text-inverse">Secretary Links</p>
+        <p class="text-inverse-50 text-xs">by Onetime Secret</p>
+      </div>
+    </div>
+    <!-- Right side - features -->
+    <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;" class="text-inverse-80">
+        <svg width="16" height="16" fill="oklch(0.73 0.12 80)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        <span class="font-body">One-time secure links</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;" class="text-inverse-80">
+        <svg width="16" height="16" fill="oklch(0.73 0.12 80)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        <span class="font-body">Text, images, or files</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;" class="text-inverse-80">
+        <svg width="16" height="16" fill="oklch(0.73 0.12 80)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        <span class="font-body">Only you can view</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem;" class="text-inverse-80">
+        <svg width="16" height="16" fill="oklch(0.73 0.12 80)" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        <span class="font-body">Auto-deletes after viewing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Bold Statement -->
+<div id="og-4" class="preview bg flex-center hidden" style="position: relative;">
+  <p class="font-display text-5xl text-inverse">A collection service.</p>
+  <!-- Logo watermark bottom right -->
+  <div class="absolute bottom-6 right-8" style="display: flex; align-items: center; gap: 0.5rem;">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+      <path d="M8 18 L8 23 L24 23 L24 18" stroke="oklch(0.97 0.01 90 / 0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 18 L12 18 L14 21 L18 21 L20 18 L24 18" stroke="oklch(0.97 0.01 90 / 0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M16 7 L16 16 M12 12 L16 16 L20 12" stroke="oklch(0.97 0.01 90 / 0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="text-inverse-40 text-sm font-body">secretarylinks.com</span>
+  </div>
+</div>
+
+</body>
+</html>
