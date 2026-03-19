@@ -19,18 +19,44 @@ const {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>{title}</title>
   <meta name="description" content={description}>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="light dark">
+  <!-- Open Graph / Social Preview
+       Available options in /public:
+       - og-1-minimal.png  (logo + tagline centered)
+       - og-2-tagline.png  (Generate a link... gone forever)
+       - og-3-features.png (logo + feature checklist) [CURRENT]
+       - og-4-bold.png     (A collection service.)
+  -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content="https://secretarylinks.com/og-3-features.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content="https://secretarylinks.com/og-3-features.png">
   <script is:inline>
     (function() {
       var t = localStorage.getItem('theme');
-      if (t) { document.documentElement.dataset.theme = t; }
-      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.dataset.theme = 'dark';
+      if (!t) {
+        if (window.matchMedia('(prefers-contrast: more)').matches) {
+          t = 'contrast';
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          t = 'dark';
+        }
       }
+      if (t) {
+        document.documentElement.dataset.theme = t;
+      }
+      document.documentElement.style.colorScheme = (t === 'dark') ? 'dark' : 'light';
     })();
   </script>
 </head>

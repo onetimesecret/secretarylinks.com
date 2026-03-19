@@ -15,11 +15,11 @@ const { class: className = '' } = Astro.props;
       placeholder="you@company.com"
       aria-label="Email address"
       autocomplete="email"
-      class="flex-1 rounded-lg border border-border-inv/15 bg-white/6 px-5 py-3.5 font-body text-text-inverse placeholder:text-text-inverse/40 outline-none transition focus:border-accent"
+      class="flex-1 rounded-lg border border-border-inv/15 bg-white/6 px-5 py-3.5 font-body text-text-inverse placeholder:text-text-inverse/40 transition focus:border-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface-inv focus-visible:outline-none"
     />
     <button
       type="submit"
-      class="rounded-lg bg-accent px-6 py-3.5 font-semibold text-accent-on transition hover:bg-accent-hover hover:-translate-y-px shrink-0"
+      class="rounded-lg bg-accent px-6 py-3.5 font-semibold text-accent-on transition hover:bg-accent-hover hover:-translate-y-px shrink-0 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-accent focus-visible:outline-none"
     >
       Notify Me
     </button>

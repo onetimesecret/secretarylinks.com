@@ -19,9 +19,9 @@ const links = [
     <a href="/" class="flex items-center gap-2 font-display text-xl text-text-inverse no-underline">
       <svg class="size-8" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-        <path d="M8 20 L16 10 L20 14 L24 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M24 8 L24 13 M24 8 L19 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="16" cy="22" r="2" fill="currentColor" opacity="0.4"/>
+        <path d="M8 18 L8 23 L24 23 L24 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 18 L12 18 L14 21 L18 21 L20 18 L24 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 7 L16 16 M12 12 L16 16 L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Secretary Links
     </a>
@@ -29,7 +29,7 @@ const links = [
     <!-- Mobile toggle -->
     <button
       data-nav-toggle
-      class="lg:hidden p-2 text-text-inverse"
+      class="lg:hidden p-2 text-text-inverse rounded-lg focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface-inv focus-visible:outline-none"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
@@ -59,7 +59,7 @@ const links = [
           href="https://onetimesecret.com"
           target="_blank"
           rel="noopener"
-          class="inline-flex items-center gap-1.5 rounded-md border border-accent-secondary/20 bg-accent-secondary/8 px-3 py-1 text-xs font-medium text-accent-secondary no-underline"
+          class="inline-flex items-center gap-1.5 rounded-md border border-accent-secondary/20 bg-accent-secondary/8 px-3 py-1 text-xs font-medium text-accent-secondary no-underline focus-visible:ring-2 focus-visible:ring-accent-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-inv focus-visible:outline-none"
         >
           Onetime Secret
         </a>
@@ -68,7 +68,7 @@ const links = [
         <ThemeToggle />
         <a
           href="/#signup"
-          class="inline-flex items-center gap-1 rounded-md bg-accent px-5 py-2 text-sm font-semibold text-accent-on no-underline transition hover:bg-accent-hover hover:-translate-y-px"
+          class="inline-flex items-center gap-1 rounded-md bg-accent px-5 py-2 text-sm font-semibold text-accent-on no-underline transition hover:bg-accent-hover hover:-translate-y-px focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-surface-inv focus-visible:outline-none"
         >
           Get Early Access
         </a>

@@ -1,0 +1,7 @@
+{
+  "extends": ["config:recommended"],
+  "branchPrefix": "deps/",
+  "lockFileMaintenance": {
+    "enabled": true
+  }
+}

@@ -217,15 +217,15 @@ const comparison = [
       <table class="w-full border-collapse text-[0.95rem]">
         <thead>
           <tr>
-            <th class="bg-surface-alt p-4 text-left font-display text-base"></th>
-            <th class="bg-surface-alt p-4 text-left font-display text-base">Classic Onetime Secret</th>
-            <th class="bg-surface-alt p-4 text-left font-display text-base">Secretary Links</th>
+            <th scope="col" class="bg-surface-alt p-4 text-left font-display text-base"></th>
+            <th scope="col" class="bg-surface-alt p-4 text-left font-display text-base">Classic Onetime Secret</th>
+            <th scope="col" class="bg-surface-alt p-4 text-left font-display text-base">Secretary Links</th>
           </tr>
         </thead>
         <tbody>
           {comparison.map(row => (
             <tr>
-              <td class="border-b border-border p-4 font-medium">{row.feature}</td>
+              <th scope="row" class="border-b border-border p-4 text-left font-medium">{row.feature}</th>
               <td class="border-b border-border p-4">{row.classic === '✓' ? <span class="font-bold text-accent-secondary">✓</span> : row.classic}</td>
               <td class="border-b border-border p-4">{row.secretary === '✓' ? <span class="font-bold text-accent-secondary">✓</span> : row.secretary}</td>
             </tr>
