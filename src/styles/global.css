@@ -201,6 +201,19 @@
 }
 
 /* ============================================
+   Focus Visible
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
    Base Styles
    ============================================ */
 html {
@@ -256,4 +269,31 @@ p { max-width: 65ch; }
 
 .animate-pulse-slow {
   animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  [data-stagger] > [data-reveal] {
+    transition-delay: 0ms;
+  }
+  .animate-pulse-slow {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
