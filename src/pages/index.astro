@@ -4,7 +4,6 @@ import Section from '../components/Section.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Card from '../components/Card.astro';
 import FlowDiagram from '../components/FlowDiagram.astro';
-import Countdown from '../components/Countdown.astro';
 import SignupForm from '../components/SignupForm.astro';
 import UseCaseCard from '../components/UseCaseCard.astro';
 
@@ -26,23 +25,19 @@ const useCases = [
 ];
 
 const features = [
-  { icon: '&#128737;', title: 'Passphrase Protection', text: 'Add an optional passphrase the recipient must enter before they can submit. A second factor for the collection channel itself.' },
   { icon: '&#127760;', title: 'Custom Domains', text: 'Use your own domain for collection links. Recipients see your brand, not ours. Builds trust, reduces friction.' },
-  { icon: '&#128200;', title: 'Audit Trail', text: 'Know when a link was created, accessed, submitted to, and viewed. Every event is logged.' },
   { icon: '&#127759;', title: 'Regional Storage', text: 'Choose where submission data is stored to meet data residency and sovereignty requirements.' },
   { icon: '&#128268;', title: 'API & Integrations', text: 'Generate Secretary Links programmatically. Embed collection flows into your existing tools.' },
-  { icon: '&#128736;', title: 'Branded Experience', text: 'Customize the collection page with your logo, colors, and messaging.' },
 ];
 
 const comparison = [
   { feature: 'Direction', classic: 'You share a secret → they view it', secretary: 'You send a link → they submit to you' },
   { feature: 'Content types', classic: 'Text only', secretary: 'Text, images, files' },
   { feature: 'Self-destructing', classic: '✓', secretary: '✓' },
-  { feature: 'Passphrase protection', classic: '✓', secretary: '✓' },
-  { feature: 'Custom domains', classic: '✓', secretary: 'Coming soon' },
-  { feature: 'Regional storage', classic: '✓', secretary: '✓' },
   { feature: 'Recipient needs account', classic: 'No', secretary: 'No' },
   { feature: 'File attachments', classic: '—', secretary: '✓' },
+  { feature: 'Custom domains', classic: '✓', secretary: 'Coming soon' },
+  { feature: 'Regional storage', classic: '✓', secretary: 'Coming soon' },
   { feature: 'API', classic: '✓', secretary: 'Coming soon' },
 ];
 ---
@@ -85,7 +80,7 @@ const comparison = [
         <!-- Eyebrow -->
         <div class="mb-8 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/12 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
           <span class="size-1.5 rounded-full bg-accent animate-pulse-slow"></span>
-          Early Access Opens May 1, 2026
+          Early Access Open · Invites Rolling Out
         </div>
 
         <h1 class="text-5xl sm:text-6xl lg:text-7xl">
@@ -99,18 +94,16 @@ const comparison = [
 
         <div class="mt-10 flex flex-wrap items-center gap-4">
           <a href="#signup" class="rounded-lg bg-accent px-8 py-4 text-lg font-semibold text-accent-on transition hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-xl no-underline">
-            Get Early Access
+            Request an Invite
           </a>
           <a href="#how-it-works" class="rounded-lg border border-white/25 px-8 py-4 text-lg font-semibold text-text-inverse transition hover:border-white/50 hover:bg-white/5 no-underline">
             See How It Works
           </a>
         </div>
 
-        <Countdown target="2026-05-01T00:00:00" />
-
-        <div class="mt-8 inline-flex items-center gap-2 rounded-lg border border-red-accent/20 bg-red-accent/10 px-4 py-2 text-sm text-red-accent">
-          May 1st. A fresh start for secure sharing.
-        </div>
+        <p class="mt-10 max-w-xl text-base text-text-inverse/70 leading-relaxed">
+          Early access is open. We&rsquo;re a small team rolling out invites in batches as we work through bugs. If you haven&rsquo;t received one yet, please bear with us. We appreciate the interest.
+        </p>
       </div>
     </div>
   </section>
@@ -198,7 +191,7 @@ const comparison = [
 
   <!-- ====== Features ====== -->
   <Section id="features" variant="dark">
-    <SectionHeader>The details matter</SectionHeader>
+    <SectionHeader subtitle="What we&rsquo;re building next, in order.">On the roadmap</SectionHeader>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
       {features.map(f => (
@@ -269,8 +262,8 @@ const comparison = [
     <div class="relative overflow-hidden rounded-3xl bg-linear-to-br from-surface-inv to-surface-inv-alt px-8 py-20 text-center text-text-inverse sm:px-16" data-reveal>
       <div class="pointer-events-none absolute -top-1/2 -left-1/4 h-[200%] w-3/4 bg-radial from-accent/8 to-transparent"></div>
       <div class="relative z-10">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl">May 1st is not a drill</h2>
-        <p class="mx-auto mt-4 text-lg text-text-inverse/70" style="max-width: 480px;">Be the first to try Secretary Links when early access opens.</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl">Get on the waiting list</h2>
+        <p class="mx-auto mt-4 text-lg text-text-inverse/70" style="max-width: 540px;">Early access is open and invites are going out in small batches. We&rsquo;re a small team working through bugs as fast as we can. Add your email and we&rsquo;ll be in touch when the next batch goes out. Thanks for your patience.</p>
         <div class="mt-8">
           <SignupForm />
         </div>
