@@ -25,23 +25,19 @@ const useCases = [
 ];
 
 const features = [
-  { icon: '&#128737;', title: 'Passphrase Protection', text: 'Add an optional passphrase the recipient must enter before they can submit. A second factor for the collection channel itself.' },
   { icon: '&#127760;', title: 'Custom Domains', text: 'Use your own domain for collection links. Recipients see your brand, not ours. Builds trust, reduces friction.' },
-  { icon: '&#128200;', title: 'Audit Trail', text: 'Know when a link was created, accessed, submitted to, and viewed. Every event is logged.' },
   { icon: '&#127759;', title: 'Regional Storage', text: 'Choose where submission data is stored to meet data residency and sovereignty requirements.' },
   { icon: '&#128268;', title: 'API & Integrations', text: 'Generate Secretary Links programmatically. Embed collection flows into your existing tools.' },
-  { icon: '&#128736;', title: 'Branded Experience', text: 'Customize the collection page with your logo, colors, and messaging.' },
 ];
 
 const comparison = [
   { feature: 'Direction', classic: 'You share a secret → they view it', secretary: 'You send a link → they submit to you' },
   { feature: 'Content types', classic: 'Text only', secretary: 'Text, images, files' },
   { feature: 'Self-destructing', classic: '✓', secretary: '✓' },
-  { feature: 'Passphrase protection', classic: '✓', secretary: '✓' },
-  { feature: 'Custom domains', classic: '✓', secretary: 'Coming soon' },
-  { feature: 'Regional storage', classic: '✓', secretary: '✓' },
   { feature: 'Recipient needs account', classic: 'No', secretary: 'No' },
   { feature: 'File attachments', classic: '—', secretary: '✓' },
+  { feature: 'Custom domains', classic: '✓', secretary: 'Coming soon' },
+  { feature: 'Regional storage', classic: '✓', secretary: 'Coming soon' },
   { feature: 'API', classic: '✓', secretary: 'Coming soon' },
 ];
 ---
@@ -195,7 +191,7 @@ const comparison = [
 
   <!-- ====== Features ====== -->
   <Section id="features" variant="dark">
-    <SectionHeader>The details matter</SectionHeader>
+    <SectionHeader subtitle="What we&rsquo;re building next, in order.">On the roadmap</SectionHeader>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
       {features.map(f => (
