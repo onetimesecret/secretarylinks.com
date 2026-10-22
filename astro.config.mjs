@@ -30,6 +30,10 @@ const spotnote = await import('spotnote').then(
 
 export default defineConfig({
   site: 'https://onetimesecretary.com',
+  // Astro 7 defaults to 'jsx', which strips the whitespace between inline
+  // elements and runs words together around links ("throughOnetime
+  // Secretsince"). true keeps the Astro 6 HTML-aware compression.
+  compressHTML: true,
   vite: {
     plugins: [tailwindcss(), spotnote?.()],
   },
