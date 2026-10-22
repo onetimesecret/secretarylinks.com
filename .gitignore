@@ -64,6 +64,9 @@ coverage/
 
 # Files
 .DS_Store
+# pnpm is the package manager; pnpm-lock.yaml is the lockfile
+package-lock.json
+yarn.lock
 !pr_agent.toml
 etc/config*
 !etc/config.example.yaml
