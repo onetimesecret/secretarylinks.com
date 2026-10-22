@@ -8,16 +8,10 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "pnpm": {
-    "overrides": {
-      "devalue": ">=5.6.4",
-      "h3": ">=1.15.9"
-    }
-  },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
-    "astro": "^7.3.8",
-    "tailwindcss": "^4.2.4"
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.2",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "spotnote": "^0.5.0"
